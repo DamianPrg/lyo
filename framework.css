@@ -84,7 +84,7 @@ body {
   display: flex;
   display: -webkit-flex; }
 
-.flexItem {
+.flexItem, .flexContainer div {
   -webkit-flex: 1;
   flex: 1; }
 

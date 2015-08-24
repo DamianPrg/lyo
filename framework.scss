@@ -138,6 +138,12 @@ body {
 	display:-webkit-flex;
 }
 
+.flexContainer {
+	div {
+		@extend .flexItem;
+	}
+}
+
 .flexItem {
 	-webkit-flex: 1;
 	flex: 1;
