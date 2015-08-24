@@ -132,6 +132,21 @@ body {
 	margin:0 auto;
 }
 
+.flexContainer {
+	@extend .container;
+	display:flex;
+	display:-webkit-flex;
+}
+
+.flexItem {
+	-webkit-flex: 1;
+	flex: 1;
+}
+
+.flexItemFixed .fixed {
+	width: auto;
+}
+
 .layout {
 	background: rgb(240,240,240);
 	border-radius: 3px;
