@@ -1,0 +1,96 @@
+/***
+ * Layo - CSS framework
+ * Author: Damian Balandowski
+ *
+ * Simple CSS framework.
+ * For better effects use normalize.css before including this css.
+ */
+/*** Core ***/
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #505050; }
+
+/*** Utils ***/
+.reset {
+  margin: 0px;
+  padding: 0px; }
+
+.pad {
+  padding: 8; }
+
+.padLeft {
+  padding-left: 8; }
+
+.padRight {
+  padding-right: 8; }
+
+.padDouble {
+  padding: 16; }
+
+.spacerTop, .spacerBoth {
+  margin-top: 8; }
+
+.spacerBottom, .spacerBoth {
+  margin-bottom: 8; }
+
+.spacerTopDouble, .spacerBothDouble {
+  margin-top: 16; }
+
+.spacerBottomDouble, .spacerBothDouble {
+  margin-top: 16; }
+
+/*** Colors / Background ***/
+.backgroundLighter {
+  background: rgba(255, 255, 255, 0.5); }
+
+.backgroundDarker {
+  background: rgba(0, 0, 0, 0.5); }
+
+/*** Text ***/
+.text-color, .text, .sm-text, .lg-text {
+  color: #505050; }
+
+.text {
+  font-size: 13; }
+
+.sm-text {
+  font-size: 12; }
+
+.lg-text {
+  font-size: 15; }
+
+.muted-text {
+  color: red; }
+
+.dark-text {
+  color: #3c3c3c; }
+
+.light-text {
+  color: #646464; }
+
+/*** Common ***/
+.hr {
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3); }
+
+/*** Layout ***/
+.container {
+  max-width: 900px;
+  margin: 0 auto; }
+
+.layout {
+  background: #f0f0f0;
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.1); }
+
+/*** Box ***/
+.boxMain {
+  border: 1px solid rgba(0, 0, 0, 0.1); }
+
+/*** Data ***/
+/*** Div table ***/
+/*** Form / Inputs ***/
+
+/*# sourceMappingURL=framework.css.map */

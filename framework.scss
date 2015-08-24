@@ -1,0 +1,157 @@
+/***
+ * Layo - CSS framework
+ * Author: Damian Balandowski
+ *
+ * Simple CSS framework.
+ * For better effects use normalize.css before including this css.
+ */
+
+$padding_: 8;
+$margin_: 8;
+
+$default_text_size: 13;
+$small_text_size: 12;
+$large_text_size: 15;
+
+$muted_text_color: red;
+
+$background_lighter: rgba(255,255,255,0.5);
+$background_darker: rgba(0,0,0,0.5);
+
+$default_color: rgb(80,80,80);
+$darker_color: rgb(60,60,60);
+$lighter_color: rgb(100,100,100);
+
+/*** Core ***/
+body {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	color: $default_color;
+}
+
+/*** Utils ***/
+.reset {
+	margin: 0px;
+	padding: 0px;
+}
+
+.pad {
+	padding: $padding_;
+}
+
+.padLeft {
+	padding-left: $padding_;
+}
+
+.padRight {
+	padding-right: $padding_;
+}
+
+.padDouble {
+	padding: $padding_ * 2;
+}
+
+.spacerTop {
+	margin-top: $margin_;
+}
+
+.spacerBottom {
+	margin-bottom: $margin_;
+}
+
+.spacerBoth {
+	@extend .spacerTop;
+	@extend .spacerBottom;
+}
+
+.spacerTopDouble {
+	margin-top: $margin_ * 2;
+}
+
+.spacerBottomDouble {
+	margin-top: $margin_ * 2;
+}
+
+.spacerBothDouble {
+	@extend .spacerBottomDouble;
+	@extend .spacerTopDouble;
+}
+
+/*** Colors / Background ***/
+.backgroundLighter {
+	background: $background_lighter;
+}
+
+.backgroundDarker {
+	background: $background_darker;
+}
+
+/*** Text ***/
+.text-color {
+	color: $default_color;
+}
+.text {
+	font-size: $default_text_size;
+	@extend .text-color;
+}
+
+.sm-text {
+	font-size: $small_text_size;
+	@extend .text-color;
+}
+
+.lg-text {
+	font-size: $large_text_size;
+	@extend .text-color;
+}
+
+.muted-text {
+	color: $muted_text_color;
+}
+
+.dark-text {
+	color: $darker_color;
+}
+
+.light-text {
+	color: $lighter_color;
+}
+
+/*** Common ***/
+.hr {
+
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+
+}
+
+/*** Layout ***/
+.container {
+	max-width: 900px;
+	margin:0 auto;
+}
+
+.layout {
+	background: rgb(240,240,240);
+	border-radius: 3px;
+	border:1px solid rgba(0,0,0,0.1);
+}
+
+/*** Box ***/
+.box {
+}
+
+.boxHeader {
+
+}
+
+.boxMain {
+	border:1px solid rgba(0,0,0,0.1);
+}
+
+/*** Data ***/
+
+/*** Div table ***/
+
+/*** Form / Inputs ***/
