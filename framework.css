@@ -7,7 +7,8 @@
  */
 /*** reset ***/
 * {
-  margin: 0px; }
+  margin: 0px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
 
 /*** Core ***/
 body {
@@ -142,6 +143,33 @@ a {
 
 /*** Data ***/
 /*** Div table ***/
+.row {
+  display: flex;
+  display: -webkit-flex;
+  padding: 10px; }
+
+.rowCenter {
+  -webkit-align-items: center;
+  -webkit-justifty-content: center; }
+
+.row {
+  background: rgba(0, 0, 0, 0.2);
+  border-top: 1px solid red; }
+
+.row:nth-child(2n) {
+  background: rgba(0, 0, 0, 0.1); }
+
+.fixedCol {
+  width: 100px; }
+
+.col {
+  -webkit-flex: 1;
+  padding: 5px; }
+
+.colIcon {
+  font-size: 20px;
+  width: 40px; }
+
 /*** Button ***/
 .button {
   background: #283a4a;
@@ -166,16 +194,28 @@ a {
   background: #3c3c3c; }
 
 .buttonDanger {
-  background: #dc4646; }
+  background: #dc4646;
+  border: 1px solid #dc4646; }
 
 .buttonDanger:hover {
-  background: #ff5454; }
+  background: #ff5454;
+  border: 1px solid #c63f3f; }
 
 .buttonSuccess {
-  background: #46dc46; }
+  background: #508250;
+  border: 1px solid #508250; }
+
+.buttonSuccess:hover {
+  Background: #609c60;
+  border: 1px solid #406840; }
 
 .buttonWarning {
-  background: #dcdc46; }
+  background: #c8c846;
+  border: 1px solid #c8c846; }
+
+.buttonWarning:hover {
+  background: #b4b43f;
+  border: 1px solid #c8c846; }
 
 /*** Nav ***/
 .nav {

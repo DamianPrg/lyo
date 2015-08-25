@@ -10,7 +10,7 @@ $padding_: 8;
 $margin_: 8;
 
 $primary_color:#283a4a;
-//$primary_color:rgb(200,50,50);
+//$primary_color:#284a3a; /* green */
 $secondary_color: $primary_color*1.5;
 $bg_color: $primary_color*2.0;
 
@@ -30,7 +30,8 @@ $lighter_color: rgb(100,100,100);
 $link_color: $primary_color;
 
 /*** reset ***/
-* {margin:0px;}
+* {margin:0px;	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
 
 /*** Core ***/
 body {
@@ -239,8 +240,32 @@ a {
 
 }
 
-.row {
+.table div {
+	
+}
 
+.row {
+	display:flex;
+	display:-webkit-flex;
+
+
+
+	padding:10px;
+
+}
+
+.rowCenter {
+	-webkit-align-items: center; 
+	-webkit-justifty-content: center;
+}
+
+.row {
+	background:rgba(0,0,0,0.2);
+	border-top:1px solid red;
+}
+
+.row:nth-child(2n) {
+	background:rgba(0,0,0,0.1);
 }
 
 .row-large {
@@ -251,8 +276,19 @@ a {
 
 }
 
-.col {
+.fixedCol {
+	width: 100px;
+}
 
+.col {
+	-webkit-flex:1;
+	
+	padding:5px;
+}
+
+.colIcon {
+	font-size:20px;
+	width:40px;
 }
 
 /*** Button ***/
@@ -285,17 +321,30 @@ a {
 
 .buttonDanger {
 	background:rgb(220,70,70);
+	border:1px solid rgb(220,70,70);
 }
 .buttonDanger:hover {
 	background:rgb(220,70,70) * 1.2;
+	border:1px solid rgb(220,70,70)*0.9;
 }
 
 .buttonSuccess {
-	background:rgb(70,220,70);
+	background:rgb(80,130,80);
+	border:1px solid rgb(80,130,80);
+}
+
+.buttonSuccess:hover {
+	Background:rgb(80,130,80)*1.2;
+	border:1px solid rgb(80,130,80)*0.8;
 }
 
 .buttonWarning {
-	background:rgb(220,220,70);
+	background:rgb(200,200,70);
+	border:1px solid rgb(200,200,70);
+}
+.buttonWarning:hover {
+	background:rgb(200,200,70)*0.9;
+	border:1px solid rgb(200,200,70);
 }
 
 
