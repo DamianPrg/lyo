@@ -29,8 +29,11 @@ $lighter_color: rgb(100,100,100);
 
 $link_color: $primary_color;
 
+$border_radius_1: 3px;
+$border_radius_2: 4px;
+
 /*** reset ***/
-* {margin:0px;	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+* {margin:0px; margin-top:-1px;	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 /*** Core ***/
@@ -45,6 +48,14 @@ a {
 }
 
 /*** Utils ***/
+		.noBorder {
+			border:none;
+		}
+
+		.noShadow {
+			box-shadow:none;
+		}
+
 .borderTopHide {
 	border-top:0px;
 }
@@ -144,6 +155,18 @@ a {
 	color: $lighter_color;
 }
 
+.left {
+	text-align: left;
+}
+
+.right {
+	text-align: right;
+}
+
+.center {
+	text-align:center;
+}
+
 .autoTextColorLight {
 	color: rgba(255,255,255,0.8);
 }
@@ -224,6 +247,10 @@ a {
 	border:1px solid rgb(170,170,170);
 }
 
+.roundedBox {
+	border-radius: $border_radius_1;
+}
+
 .boxHeader {
 	font-weight:bold;
 	background:Red;
@@ -237,7 +264,7 @@ a {
 
 /*** Div table ***/
 .table {
-
+	border:1px solid $primary_color;
 }
 
 .table div {
@@ -250,7 +277,6 @@ a {
 
 
 
-	padding:10px;
 
 }
 
@@ -260,20 +286,11 @@ a {
 }
 
 .row {
-	background:rgba(0,0,0,0.2);
-	border-top:1px solid red;
+	background:rgba(0,0,0,0.02);
 }
 
 .row:nth-child(2n) {
-	background:rgba(0,0,0,0.1);
-}
-
-.row-large {
-	
-}
-
-.fixedRow {
-
+	background:rgba(0,0,0,0.05);
 }
 
 .fixedCol {
@@ -289,6 +306,7 @@ a {
 .colIcon {
 	font-size:20px;
 	width:40px;
+	text-align:center;
 }
 
 /*** Button ***/
@@ -310,6 +328,17 @@ a {
 	background: $primary_color * 1.2;
 		border:1px solid $primary_color*0.9;
 
+}
+.button i {
+		color:rgba(255,255,255,0.8)*0.5;
+
+}
+
+.buttonSmall {
+	font-size:10px;
+	height:20px;
+	line-height:20px;
+	border-radius:2px;
 }
 
 .buttonDark {
@@ -372,5 +401,19 @@ a {
 	}
 }
 
+/*** Other ***/
+.primaryBorder {
+	border:1px solid $primary_color;
+}
+.secondaryBorder {
+	border:1px solid $secondary_color;
+}
 
 /*** Form / Inputs ***/
+
+/*** Media ***/
+@media screen and (max-width: 100px) {
+    .container {
+    	width: 100% !important;
+    }
+}

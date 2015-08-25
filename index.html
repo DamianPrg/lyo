@@ -12,13 +12,26 @@
 			background:rgb(220,220,230);
 		}
 		.container {
-			max-width: 900px;
+			max-width: 75%;
+			border:1px solid rgba(0,0,0,0.2);
+			box-shadow:0px 0px 10px 5px rgba(0,0,0,0.1);
+		}
+		.noBorder {
+			border:none;
+		}
+
+		.noShadow {
+			box-shadow:none;
 		}
 		</style>
 	</head>
 
 	<body>
 		<div class='container layout'>
+			<header>
+			<div class='' style='height:80px;'>
+			</div>
+			</header>
 			<nav class='nav'> 
 				<a href='#'>Index</a>
 				<a href='#'>Demo</a>
@@ -41,7 +54,7 @@
 				<h3 class='sectionTitle'>
 				Tables demo
 				</h3>
-				<div class='box pad spacerBottom'>
+				<div class='box pad spacerBottom backgroundLighter secondaryBorder roundedBox borderTopHide'>
 					<h2>Table demo</h2>
 					<div class='mutedText smallText'>
 			
@@ -74,21 +87,24 @@
 							<div class='col'>Damian<br>
 							Balandowski 'aKa' DamianPrg</div>
 							<div class='col'>20</div>
-							<div class='fixedCol'>Niebieski</div>
+							<div class='fixedCol'>Niebieski<br>
+							<a href='#' class='button buttonDark spacerBoth'>Moderation <i class='fa fa-caret-down'></i></a></div>
 						</div>
 					</div>	
 				<!-- /div table -->
 			
 					<a href='#' class='button spacerBoth'>Create Account</a>
-					<a href='#' class='button buttonDark spacerBoth'>Moderation</a>
+					<a href='#' class='button buttonDark spacerBoth'>Moderation <i class='fa fa-caret-down'></i></a>
+										<a href='#' class='button buttonDark buttonSmall spacerBoth'>Small <i class='fa fa-caret-down'></i></a>
+
 										<a href='#' class='button buttonDanger spacerBoth'>Remove</a>
 										<a href='#' class='button buttonWarning spacerBoth'>Warning</a>
-										<a href='#' class='button buttonSuccess spacerBoth'>Success</a>
+										<a href='#' class='button buttonSuccess buttonSmall spacerBoth'>Success</a>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class='container pad'>
+		<div class='container pad noBorder noShadow'>
 			<div class='text mutedText' style='text-align:center;'>LYO by Damian Balandowski</div>
 		</div>
 	</body>

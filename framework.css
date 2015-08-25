@@ -8,6 +8,7 @@
 /*** reset ***/
 * {
   margin: 0px;
+  margin-top: -1px;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
 
 /*** Core ***/
@@ -19,6 +20,12 @@ a {
   color: #283a4a; }
 
 /*** Utils ***/
+.noBorder {
+  border: none; }
+
+.noShadow {
+  box-shadow: none; }
+
 .borderTopHide {
   border-top: 0px; }
 
@@ -85,6 +92,15 @@ a {
 .lightText {
   color: #646464; }
 
+.left {
+  text-align: left; }
+
+.right {
+  text-align: right; }
+
+.center {
+  text-align: center; }
+
 .autoTextColorLight {
   color: rgba(255, 255, 255, 0.8); }
 
@@ -134,6 +150,9 @@ a {
 .box {
   border: 1px solid #aaaaaa; }
 
+.roundedBox {
+  border-radius: 3px; }
+
 .boxHeader {
   font-weight: bold;
   background: Red; }
@@ -143,21 +162,22 @@ a {
 
 /*** Data ***/
 /*** Div table ***/
+.table {
+  border: 1px solid #283a4a; }
+
 .row {
   display: flex;
-  display: -webkit-flex;
-  padding: 10px; }
+  display: -webkit-flex; }
 
 .rowCenter {
   -webkit-align-items: center;
   -webkit-justifty-content: center; }
 
 .row {
-  background: rgba(0, 0, 0, 0.2);
-  border-top: 1px solid red; }
+  background: rgba(0, 0, 0, 0.02); }
 
 .row:nth-child(2n) {
-  background: rgba(0, 0, 0, 0.1); }
+  background: rgba(0, 0, 0, 0.05); }
 
 .fixedCol {
   width: 100px; }
@@ -168,7 +188,8 @@ a {
 
 .colIcon {
   font-size: 20px;
-  width: 40px; }
+  width: 40px;
+  text-align: center; }
 
 /*** Button ***/
 .button {
@@ -186,6 +207,15 @@ a {
 .button:hover {
   background: #304659;
   border: 1px solid #243443; }
+
+.button i {
+  color: rgba(128, 128, 128, 0.8); }
+
+.buttonSmall {
+  font-size: 10px;
+  height: 20px;
+  line-height: 20px;
+  border-radius: 2px; }
 
 .buttonDark {
   background: #323232; }
@@ -234,6 +264,17 @@ a {
 .nav a:hover {
   Background: #3c576f; }
 
+/*** Other ***/
+.primaryBorder {
+  border: 1px solid #283a4a; }
+
+.secondaryBorder {
+  border: 1px solid #3c576f; }
+
 /*** Form / Inputs ***/
+/*** Media ***/
+@media screen and (max-width: 100px) {
+  .container, .flexContainer {
+    width: 100% !important; } }
 
 /*# sourceMappingURL=framework.css.map */
