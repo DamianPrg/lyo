@@ -5,10 +5,17 @@
  * Simple CSS framework.
  * For better effects use normalize.css before including this css.
  */
+/*** reset ***/
+* {
+  margin: 0px; }
+
 /*** Core ***/
 body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #505050; }
+
+a {
+  color: #283a4a; }
 
 /*** Utils ***/
 .reset {
@@ -44,28 +51,28 @@ body {
   background: rgba(255, 255, 255, 0.5); }
 
 .backgroundDarker {
-  background: rgba(0, 0, 0, 0.5); }
+  background: rgba(0, 0, 0, 0.1); }
 
-/*** Text ***/
-.text-color, .text, .sm-text, .lg-text {
+/*** Text/Colors/Background ***/
+.text-color, .text, .nav a, .smallText, .largeText {
   color: #505050; }
 
-.text {
+.text, .nav a {
   font-size: 13; }
 
-.sm-text {
+.smallText {
   font-size: 12; }
 
-.lg-text {
+.largeText {
   font-size: 15; }
 
-.muted-text {
-  color: red; }
+.mutedText {
+  color: #505050; }
 
-.dark-text {
+.darkText {
   color: #3c3c3c; }
 
-.light-text {
+.lightText {
   color: #646464; }
 
 .autoTextColorLight {
@@ -73,6 +80,10 @@ body {
 
 .autoTextColorDark {
   color: rgba(0, 0, 0, 0.8); }
+
+/* antialiasing */
+.textAA, .button, .nav a {
+  -webkit-font-smoothing: antialiased; }
 
 /*** Common ***/
 .hr {
@@ -90,24 +101,63 @@ body {
   display: flex;
   display: -webkit-flex; }
 
-.flexItem, .flexContainer div {
+.flexItem {
   -webkit-flex: 1;
   flex: 1; }
 
-.flexItemFixed .fixed {
+.fixed {
   width: auto; }
 
 .layout {
-  background: #f0f0f0;
-  border-radius: 3px;
-  border: 1px solid rgba(0, 0, 0, 0.1); }
+  background: rgba(255, 255, 255, 0.9); }
 
 /*** Box ***/
+.box {
+  border: 1px solid #aaaaaa; }
+
+.boxHeader {
+  font-weight: bold;
+  background: Red; }
+
 .boxMain {
   border: 1px solid rgba(0, 0, 0, 0.1); }
 
 /*** Data ***/
 /*** Div table ***/
+/*** Button ***/
+.button {
+  background: #283a4a;
+  height: 30px;
+  display: inline-block;
+  line-height: 30px;
+  padding-left: 13px;
+  padding-right: 13px;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  border-radius: 4px;
+  border: 1px solid #283a4a; }
+
+.button:hover {
+  background: #304659;
+  border: 1px solid #243443; }
+
+/*** Nav ***/
+.nav {
+  background: #283a4a;
+  height: 38px;
+  line-height: 38px;
+  padding-left: 10px; }
+
+.nav a {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none; }
+.nav a:hover {
+  Background: #304659; }
+
 /*** Form / Inputs ***/
 
 /*# sourceMappingURL=framework.css.map */

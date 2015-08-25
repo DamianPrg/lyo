@@ -9,23 +9,35 @@
 $padding_: 8;
 $margin_: 8;
 
+$primary_color:#283a4a;
+$secondary_color: $primary_color*1.2;
+
 $default_text_size: 13;
 $small_text_size: 12;
 $large_text_size: 15;
 
-$muted_text_color: red;
+$muted_text_color: rgb(80,80,80);
 
 $background_lighter: rgba(255,255,255,0.5);
-$background_darker: rgba(0,0,0,0.5);
+$background_darker: rgba(0,0,0,0.1);
 
 $default_color: rgb(80,80,80);
 $darker_color: rgb(60,60,60);
 $lighter_color: rgb(100,100,100);
 
+$link_color: $primary_color;
+
+/*** reset ***/
+* {margin:0px;}
+
 /*** Core ***/
 body {
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	color: $default_color;
+}
+
+a {
+	color: $link_color;
 }
 
 /*** Utils ***/
@@ -85,7 +97,7 @@ body {
 	background: $background_darker;
 }
 
-/*** Text ***/
+/*** Text/Colors/Background ***/
 .text-color {
 	color: $default_color;
 }
@@ -94,25 +106,25 @@ body {
 	@extend .text-color;
 }
 
-.sm-text {
+.smallText {
 	font-size: $small_text_size;
 	@extend .text-color;
 }
 
-.lg-text {
+.largeText {
 	font-size: $large_text_size;
 	@extend .text-color;
 }
 
-.muted-text {
+.mutedText {
 	color: $muted_text_color;
 }
 
-.dark-text {
+.darkText {
 	color: $darker_color;
 }
 
-.light-text {
+.lightText {
 	color: $lighter_color;
 }
 
@@ -122,6 +134,23 @@ body {
 
 .autoTextColorDark {
 	color: rgba(0,0,0,0.8);
+}
+
+.borderLight {
+
+}
+
+.borderDark {
+
+}
+
+.borderAuto {
+
+}
+
+/* antialiasing */
+.textAA {
+	-webkit-font-smoothing: antialiased;
 }
 
 /*** Common ***/
@@ -146,33 +175,31 @@ body {
 	display:-webkit-flex;
 }
 
-.flexContainer {
-	div {
-		@extend .flexItem;
-	}
-}
-
 .flexItem {
 	-webkit-flex: 1;
 	flex: 1;
 }
 
-.flexItemFixed .fixed {
+.fixed {
 	width: auto;
 }
 
 .layout {
-	background: rgb(240,240,240);
-	border-radius: 3px;
-	border:1px solid rgba(0,0,0,0.1);
+	background: rgba(255,255,255,0.9);
+}
+
+.layoutMain {
+
 }
 
 /*** Box ***/
 .box {
+	border:1px solid rgb(170,170,170);
 }
 
 .boxHeader {
-
+	font-weight:bold;
+	background:Red;
 }
 
 .boxMain {
@@ -182,5 +209,70 @@ body {
 /*** Data ***/
 
 /*** Div table ***/
+.table {
+
+}
+
+.row {
+
+}
+
+.row-large {
+	
+}
+
+.fixedRow {
+
+}
+
+.col {
+
+}
+
+/*** Button ***/
+.button {
+	background: $primary_color;
+	height:30px;
+	display:inline-block;
+	line-height:30px;
+	padding-left:13px;
+	padding-right:13px;
+	color:rgba(255,255,255,0.8);
+	@extend .textAA;
+	text-decoration:none;
+	border-radius:4px;
+	border:1px solid $primary_color;
+
+}
+.button:hover {
+	background: $primary_color * 1.2;
+		border:1px solid $primary_color*0.9;
+
+}
+
+/*** Nav ***/
+.nav {
+	background: $primary_color;
+	height: 38px;
+	line-height: 38px;
+	padding-left:10px;
+}
+.nav {
+	a {
+		@extend .textAA;
+		padding-left:10px;
+		padding-right:10px;
+		padding-top:7px;
+		padding-bottom:7px;
+
+		@extend .text;
+		color: rgba(255,255,255, 0.9);
+		text-decoration:none;
+	}
+	a:hover {
+		Background: $secondary_color;
+	}
+}
+
 
 /*** Form / Inputs ***/
