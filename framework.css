@@ -18,6 +18,15 @@ a {
   color: #283a4a; }
 
 /*** Utils ***/
+.borderTopHide {
+  border-top: 0px; }
+
+.borderNone {
+  border: 0px; }
+
+.borderHidden {
+  border: 1px solid transparent; }
+
 .reset {
   margin: 0px;
   padding: 0px; }
@@ -82,10 +91,19 @@ a {
   color: rgba(0, 0, 0, 0.8); }
 
 /* antialiasing */
-.textAA, .button, .nav a {
+.textAA, .sectionTitle, .button, .nav a {
   -webkit-font-smoothing: antialiased; }
 
 /*** Common ***/
+/* hX titles */
+.sectionTitle {
+  background: #3c576f;
+  padding: 5px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 200; }
+
 .hr {
   border: 0;
   height: 0;
@@ -141,6 +159,24 @@ a {
   background: #304659;
   border: 1px solid #243443; }
 
+.buttonDark {
+  background: #323232; }
+
+.buttonDark:hover {
+  background: #3c3c3c; }
+
+.buttonDanger {
+  background: #dc4646; }
+
+.buttonDanger:hover {
+  background: #ff5454; }
+
+.buttonSuccess {
+  background: #46dc46; }
+
+.buttonWarning {
+  background: #dcdc46; }
+
 /*** Nav ***/
 .nav {
   background: #283a4a;
@@ -156,7 +192,7 @@ a {
   color: rgba(255, 255, 255, 0.9);
   text-decoration: none; }
 .nav a:hover {
-  Background: #304659; }
+  Background: #3c576f; }
 
 /*** Form / Inputs ***/
 
