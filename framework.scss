@@ -40,11 +40,23 @@ $border_radius_2: 4px;
 body {
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	color: $default_color;
-	
+	-webkit-font-smoothing: antialiased;
 }
 
 a {
 	color: $link_color;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0px;
+}
+
+h2 {
+	font-size:23px;
+}
+
+h3 {
+	font-size:15px;
 }
 
 /*** Utils ***/
@@ -202,6 +214,9 @@ a {
 	color: rgba(255,255,255,0.9);
 	@extend .textAA;
 	font-weight:200;
+	padding:6px;
+	padding-top:7px;
+	padding-bottom:7px;
 }
 
 .hr {
@@ -287,6 +302,7 @@ a {
 
 .row {
 	background:rgba(0,0,0,0.02);
+	padding:8px;
 }
 
 .row:nth-child(2n) {

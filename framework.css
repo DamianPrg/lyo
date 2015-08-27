@@ -14,10 +14,20 @@
 /*** Core ***/
 body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color: #505050; }
+  color: #505050;
+  -webkit-font-smoothing: antialiased; }
 
 a {
   color: #283a4a; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0px; }
+
+h2 {
+  font-size: 23px; }
+
+h3 {
+  font-size: 15px; }
 
 /*** Utils ***/
 .noBorder {
@@ -119,7 +129,10 @@ a {
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
   color: rgba(255, 255, 255, 0.9);
-  font-weight: 200; }
+  font-weight: 200;
+  padding: 6px;
+  padding-top: 7px;
+  padding-bottom: 7px; }
 
 .hr {
   border: 0;
@@ -174,7 +187,8 @@ a {
   -webkit-justifty-content: center; }
 
 .row {
-  background: rgba(0, 0, 0, 0.02); }
+  background: rgba(0, 0, 0, 0.02);
+  padding: 8px; }
 
 .row:nth-child(2n) {
   background: rgba(0, 0, 0, 0.05); }
