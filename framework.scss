@@ -1,558 +1,36 @@
-/***
+/**
  * Lyo - CSS framework
- * Author: Damian Balandowski
- *
- * Simple CSS framework.
- * For better effects use normalize.css before including this css.
+ * Damian Balandowski
  */
 
-$default_padding: 8px;
-$small_padding: $default_padding - 3;
-
-$padding_: 8;
-$padding_s : $padding_ - 2;
-$margin_: 8;
-
-$primary_color:#283a4a;
-//$primary_color:#284a3a; /* green */
-$primary_color:rgb(50,50,50);
-$primary_color:#283a4a;
-
-$secondary_color: $primary_color*1.5;
-$bg_color: $primary_color*2.0;
-$dark_color: rgb(60,60,60);
-
-$default_text_size: 13;
-$small_text_size: 12;
-$large_text_size: 15;
-
-$muted_text_color: rgb(80,80,80);
-
-$background_lighter: rgba(255,255,255,0.8);
-$background_darker: rgba(0,0,0,0.05);
-
-$default_color: rgb(80,80,80);
-$darker_color: rgb(60,60,60);
-$lighter_color: rgb(100,100,100);
-
-$link_color: $primary_color;
-
-$border_radius_1: 3px;
-$border_radius_2: 4px;
-
-/*** reset ***/
-* {margin:0px; margin-top:-1px;	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-
-/*** Core ***/
-body {
-	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	color: $default_color;
-	-webkit-font-smoothing: antialiased;
-}
-
-a {
-	color: $link_color;
-}
-
-h1, h2, h3, h4, h5, h6 {
-	margin: 0px;
-}
-
-h2 {
-	font-size:23px;
-}
-
-h3 {
-	font-size:15px;
-}
-
-/*** Utils ***/
-		.noBorder {
-			border:none;
-		}
-
-		.noShadow {
-			box-shadow:none;
-		}
-
-.borderTopHide {
-	border-top:0px;
-}
-
-.borderNone {
-	border:0px;
-}
-
-.borderHidden {
-	border:1px solid rgba(0,0,0,0.0);
-}
-
-.reset {
-	margin: 0px;
-	padding: 0px;
-}
-
-.pad {
-	padding: $padding_;
-}
-
-.padLeft {
-	padding-left: $padding_;
-}
-
-.padRight {
-	padding-right: $padding_;
-}
-
-.padDouble {
-	padding: $padding_ * 2;
-}
-
-.spacerTop {
-	margin-top: $margin_;
-}
-
-.spacerBottom {
-	margin-bottom: $margin_;
-}
-
-.spacerBoth {
-	@extend .spacerTop;
-	@extend .spacerBottom;
-}
-
-.spacerTopDouble {
-	margin-top: $margin_ * 2;
-}
-
-.spacerBottomDouble {
-	margin-top: $margin_ * 2;
-}
-
-.spacerBothDouble {
-	@extend .spacerBottomDouble;
-	@extend .spacerTopDouble;
-}
-
-/*** Colors / Background ***/
-.backgroundLighter {
-	background: $background_lighter;
-}
-
-.backgroundDarker {
-	background: $background_darker;
-}
-
-/*** Text/Colors/Background ***/
-.text-color {
-	color: $default_color;
-}
-.text {
-	font-size: $default_text_size;
-	@extend .text-color;
-}
-
-.smallText {
-	font-size: $small_text_size;
-	@extend .text-color;
-}
-
-.largeText {
-	font-size: $large_text_size;
-	@extend .text-color;
-}
-
-.mutedText {
-	color: $muted_text_color;
-}
-
-.darkText {
-	color: $darker_color;
-}
-
-.lightText {
-	color: $lighter_color;
-}
-
-.left {
-	text-align: left;
-}
-
-.right {
-	text-align: right;
-}
-
-.center {
-	text-align:center;
-}
-
-.autoTextColorLight {
-	color: rgba(255,255,255,0.8);
-}
-
-.autoTextColorDark {
-	color: rgba(0,0,0,0.8);
-}
-
-.borderLight {
-
-}
-
-.borderDark {
-
-}
-
-.borderAuto {
-
-}
-
-/* antialiasing */
-.textAA {
-	-webkit-font-smoothing: antialiased;
-}
-
-/*** Common ***/
-/* hX titles */
-.boxTitle {
-	background: $secondary_color;
-	padding: $padding_;
-	border-top-left-radius:2px;
-	border-top-right-radius:2px;
-	color: rgba(255,255,255,0.9);
-	@extend .textAA;
-	font-weight:200;
-	padding:$padding_;
-	padding-top:7px;
-	padding-bottom:7px;
-	text-shadow:0px -1px 1px rgba(0,0,0,0.6);
-}
-
-.boxTitle.dark {
-	background: $dark_color;
-}
-
-.hr {
-
-    border: 0;
-    height: 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
-
-}
-
-/*** Layout ***/
-.container {
-	max-width: 900px;
-	margin:0 auto;
-}
-
-.flexContainer {
-	@extend .container;
-	display:flex;
-	display:-webkit-flex;
-}
-
-.flexItem {
-	-webkit-flex: 1;
-	flex: 1;
-}
-
-.fixed {
-	width: auto;
-}
-
-.layout {
-	background: rgba(255,255,255,0.9);
-}
-
-.layoutMain {
-
-}
-
-/*** Box ***/
-.box {
-	border:1px solid rgb(170,170,170);
-}
-
-.roundedBox {
-	/*border-radius: $border_radius_1;*/
-}
-
-.boxHeader {
-	font-weight:bold;
-	background:Red;
-}
-
-.boxMain {
-	border:1px solid rgba(0,0,0,0.1);
-}
-
-/*** Data ***/
-
-/*** Div table ***/
-.table {
-	border:1px solid rgba(0,0,0,0.2);
-	border-radius:3px;
-}
-
-.table div {
-	
-}
-
-.row {
-	display:flex;
-	display:-webkit-flex;
-
-
-
-
-}
-
-.rowCenter {
-	-webkit-align-items: center; 
-	-webkit-justifty-content: center;
-}
-
-.row {
-	background:rgba(0,0,0,0.02);
-	padding:$padding_;
-}
-
-.row:nth-child(2n) {
-	background:rgba(0,0,0,0.05);
-}
-
-.fixedCol {
-	width: 200px;
-}
-
-.col {
-	-webkit-flex:1;
-	
-	padding:$padding_;
-}
-
-.colIcon {
-	font-size:30px;
-	width:40px;
-	text-align:center;
-}
-
-/*** Button ***/
-.button {
-	background: $primary_color;
-	height:30px;
-	display:inline-block;
-	line-height:30px;
-	padding-left:13px;
-	padding-right:13px;
-	color:rgba(255,255,255,0.8);
-	@extend .textAA;
-	text-decoration:none;
-	border-radius:4px;
-	border:1px solid $primary_color;
-
-
-}
-.button .button-gradient {
-	background: linear-gradient($primary_color*1.2, $primary_color * 0.8);
-}
-.button:hover {
-	background: $primary_color * 1.2;
-		border:1px solid $primary_color*0.9;
-
-}
-.button i {
-		color:rgba(255,255,255,0.8)*0.5;
-
-}
-
-.buttonSmall {
-	font-size:10px;
-	height:20px;
-	line-height:20px;
-	border-radius:2px;
-}
-
-.buttonDark {
-	background:rgb(50,50,50);
-}
-.buttonDark:hover {
-	background:rgb(50,50,50)*1.2;
-}
-
-.buttonDanger {
-	background:rgb(220,70,70);
-	border:1px solid rgb(220,70,70);
-}
-.buttonDanger:hover {
-	background:rgb(220,70,70) * 1.2;
-	border:1px solid rgb(220,70,70)*0.9;
-}
-
-.buttonSuccess {
-	background:rgb(80,130,80);
-	border:1px solid rgb(80,130,80);
-}
-
-.buttonSuccess:hover {
-	Background:rgb(80,130,80)*1.2;
-	border:1px solid rgb(80,130,80)*0.8;
-}
-
-.buttonWarning {
-	background:#f0ad4e;
-	border:1px solid rgb(200,200,70);
-}
-.buttonWarning:hover {
-	background:#f0ad4e*0.9;
-	border:1px solid #f0ad4e * 0.8;
-}
-
-
-/*** Nav ***/
-
-
-/*** Other ***/
-.primaryBorder {
-	border:1px solid $primary_color;
-}
-.secondaryBorder {
-	border:1px solid $secondary_color;
-}
-
-/*** Form / Inputs ***/
-input[type=text] {
-	padding:$padding_s;
-	font-size:14px;
-	color:rgba(0,0,0,0.70);
-}
-select {
-	border:none;
-	min-width:200px;
-	background:#fff;
-	border:1px solid rgba(0,0,0,0.2);
-	padding:$padding_s;
-
-	font-size:13px;
-	    -webkit-appearance:none;
-    -moz-appearance:none;
-    appearance:none;
-    cursor:pointer;
-    color:rgba(0,0,0,0.7);
-    font-size:14px;
-}
-.form {
-	
-}
-
-
-
-.form-element {
-	margin-top: 5px;
-	margin-bottom: 5px;
-
-
-}
-
-.form-styles {
-	/*
-		background:rgba(0,0,0,0.05);
-		border:1px solid rgba(0,0,0,0.1);
-		border-radius:2px;
-		*/
-}
-
-.form-v {
-	.form-element {
-		@extend .form-styles;
-	}
-
-	.info, .input {
-		
-		padding:$padding_s;
-	}
-
-	.full input {
-		width: 100%;
-	}
-
-	.half input {
-		width:50%;
-	}
-
-}
-
-.form-h {
-	.form-element {
-		@extend .form-styles;
-
-
-			display:flex;
-		display:-webkit-flex;
-	}
-
-	.info, .input {
-		
-		padding:5px;
-		padding:$padding_s;
-
-	}
-
-	.input {
-		-webkit-flex:2;
-		flex:2;
-	}
-
-	.info {
-		-webkit-flex:1;
-		flex:1;
-		text-align:right;
-	}
-
-	.full input {
-		width: 100%;
-	}
-
-	.half input {
-		width:50%;
-	}
-
-	.full select {
-		width:100%;
-	}
-	.half select {
-		width:100%;
-	}
-}
-
-/********* Refeactoring names *********/
-
+/********* Normalize *********/
 @import 'normalize';
+
 /********* Variables / Tweaking *********/
 $default_padding: 		8;
 $small_padding: 		$default_padding - 3;
 $default_margin:        8;
 $small_margin:          $default_margin - 3;
 
-$default_text_color:    orange;
+$default_text_color:    rgb(65,65,65);
 
 $default_text_size:     14;
 $small_text_size:       12;
 $large_text_size:       16;
 
-$primary_color:         #283a4a;
-$secondary_color:       $primary_color * 1.2;
-$dark_color:            black;
-$muted_color:           grey;
+$primary_color:         #283a4a * 1.1;
+$secondary_color:       $primary_color * 0.8;
+$dark_color:            rgb(50,50,50);
+$muted_color:           rgb(70,70,70);
 $auto_color_dark:       0;
 $auto_color_light:      0;
 
 $border_radius:         3;
 $border_radius_small:   2;
+$border_default_color:  red;
+$border_auto_color:     rgba(0,0,0,0.25);
 
-$use_gradients:         false;
+$use_gradients:         true;
 
 /********* Mixins **********/
 @mixin animations()
@@ -562,8 +40,22 @@ $use_gradients:         false;
 }
 
 /********* Core **********/
+body {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	color: $default_text_color;
+	font-size:$default_text_size;
+	margin-top: -1px;
+}
+
+div {
+	overflow:hidden;
+	box-sizing: border-box;
+}
+
 h1, h2, h3, h4, h5, h6 {
 	font-weight: 300;
+	margin:0px;
 }
 
 .lyoReset {
@@ -574,8 +66,30 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /********* Text / Style / Color **********/
+.lyoAutoTextShadow {
+	text-shadow:0px -1px 1px rgba(0,0,0,0.5);
+}
 
 /********* Helpers / Generic **********/
+.lyoAutoLightColor {
+	color: rgba(255,255,255,0.2);
+	color:red;
+}
+.lyoAutoDarkColor {
+	color: rgba(0,0,0,0.5);
+}
+
+.lyoPad {
+	padding: $default_padding;
+}
+
+.lyoPadLeft {
+	padding-left: $default_padding;
+}
+.lyoPadRight {
+	padding-right: $default_padding;
+}
+
 .lyoSpacerTop {
 	margin-top: $default_margin;
 }
@@ -597,7 +111,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 .lyoNav {
 	a {
-		@extend .textAA;
 		padding-left:10px;
 		padding-right:10px;
 		padding-top:6px;
@@ -605,14 +118,13 @@ h1, h2, h3, h4, h5, h6 {
 
 		@include animations();
 
-		@extend .text;
 		color: rgba(255,255,255, 0.9);
 		text-decoration:none;
 		border:1px solid rgba(0,0,0,0.0);
 	}
 	a:hover {
-		border:1px solid rgba(0,0,0,0.3);
-		background: $secondary_color;
+		border:1px solid rgba(255,255,255,0.3);
+		background: rgba(255,255,255,0.2);
 		border-radius:2px;
 	}
 }
@@ -623,10 +135,14 @@ h1, h2, h3, h4, h5, h6 {
 
 	height: $height;
 	line-height: $height;
+	text-align:center;
+	font-size:28px;
+	font-weight:200;
+	
 }
 
 .lyoContainer {
-	max-width: 90%;
+	max-width: 1400px;
 	margin:0 auto;
 	border:1px solid rgba(0,0,0,0.2);
 }
@@ -671,10 +187,14 @@ h1, h2, h3, h4, h5, h6 {
 
 /********* Flex table **********/
 .lyoTable {
-	display: -webkit-flex;
-	display: flex;
-	
-	border:1px solid red;
+
+	border:1px solid $border_auto_color;
+	padding: $default_padding;
+}
+
+.lyoTableCentered .lyoRow {
+		-webkit-align-items: center; 
+	-webkit-justifty-content: center;
 }
 
 .lyoCol {
@@ -684,26 +204,53 @@ h1, h2, h3, h4, h5, h6 {
 
 .lyoRow {
 	width:100%;
+	display:-webkit-flex;
+	display:flex;
+	padding:$default_padding;
+		
+	border-radius:$border_radius_small;
+
+}
+
+.lyoRow:nth-child(2n) {
+	background:rgba(0,0,0,0.04);
 }
 
 /********* Box **********/
 .lyoBox {
-	@extend .spacerBoth;
+	@extend .lyoSpacerBoth;
 
 	border:1px solid $secondary_color;
 	border-radius: $border_radius;
+
 }
 
 .lyoBoxTitle {
+	@extend .lyoAutoTextShadow;
+
 	background: $secondary_color;
 	background: if($use_gradients, linear-gradient($secondary_color*1.5, $secondary_color*1.0), $secondary_color);
 
 	color:#fff;
 	padding:$default_padding;
+
+	@extend .lyoAutoLightColor;
 }
 
 .lyoBoxContent {
 	padding:$default_padding;
+}
+
+/********* Media **********/
+@media screen and (max-width: 950px) {
+	.lyoLayoutSide {
+		display:none;
+	}
+}
+
+/* Hide sides */
+.lyoLayoutSide {
+	display:none;
 }
 
 
