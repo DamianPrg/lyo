@@ -17,10 +17,6 @@ body {
   color: #505050;
   -webkit-font-smoothing: antialiased; }
 
-header {
-	font-weight: 100;
-}
-
 a {
   color: #283a4a; }
 
@@ -295,6 +291,61 @@ h3 {
   border: 1px solid #3c576f; }
 
 /*** Form / Inputs ***/
+input[type=text] {
+  padding: 4px;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.7); }
+
+select {
+  border: none;
+  min-width: 200px;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 5px;
+  font-size: 13px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 14px; }
+
+.form-element {
+  margin-top: 5px;
+  margin-bottom: 5px; }
+
+.form-v .form-element {
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 2px; }
+.form-v .info, .form-v .input {
+  padding: 5px; }
+.form-v .full input {
+  width: 100%; }
+.form-v .half input {
+  width: 50%; }
+
+.form-h .form-element {
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  display: flex;
+  display: -webkit-flex; }
+.form-h .info, .form-h .input {
+  padding: 5px;
+  padding: 10px; }
+.form-h .input {
+  -webkit-flex: 2;
+  flex: 2; }
+.form-h .info {
+  -webkit-flex: 1;
+  flex: 1;
+  text-align: right; }
+.form-h .full input {
+  width: 100%; }
+.form-h .half input {
+  width: 50%; }
+
 /*** Media ***/
 @media screen and (max-width: 100px) {
   .container, .flexContainer {
