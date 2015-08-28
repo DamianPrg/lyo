@@ -1,20 +1,26 @@
 /***
- * Layo - CSS framework
+ * Lyo - CSS framework
  * Author: Damian Balandowski
  *
  * Simple CSS framework.
  * For better effects use normalize.css before including this css.
  */
 
+$default_padding: 8px;
+$small_padding: $default_padding - 3;
+
 $padding_: 8;
+$padding_s : $padding_ - 2;
 $margin_: 8;
 
 $primary_color:#283a4a;
 //$primary_color:#284a3a; /* green */
 $primary_color:rgb(50,50,50);
 $primary_color:#283a4a;
+
 $secondary_color: $primary_color*1.5;
 $bg_color: $primary_color*2.0;
+$dark_color: rgb(60,60,60);
 
 $default_text_size: 13;
 $small_text_size: 12;
@@ -208,18 +214,22 @@ h3 {
 
 /*** Common ***/
 /* hX titles */
-.sectionTitle {
+.boxTitle {
 	background: $secondary_color;
-	padding:5px;
+	padding: $padding_;
 	border-top-left-radius:2px;
 	border-top-right-radius:2px;
 	color: rgba(255,255,255,0.9);
 	@extend .textAA;
 	font-weight:200;
-	padding:6px;
+	padding:$padding_;
 	padding-top:7px;
 	padding-bottom:7px;
 	text-shadow:0px -1px 1px rgba(0,0,0,0.6);
+}
+
+.boxTitle.dark {
+	background: $dark_color;
 }
 
 .hr {
@@ -306,7 +316,7 @@ h3 {
 
 .row {
 	background:rgba(0,0,0,0.02);
-	padding:8px;
+	padding:$padding_;
 }
 
 .row:nth-child(2n) {
@@ -314,13 +324,13 @@ h3 {
 }
 
 .fixedCol {
-	width: 100px;
+	width: 200px;
 }
 
 .col {
 	-webkit-flex:1;
 	
-	padding:5px;
+	padding:$padding_;
 }
 
 .colIcon {
@@ -392,38 +402,17 @@ h3 {
 }
 
 .buttonWarning {
-	background:rgb(200,200,70);
+	background:#f0ad4e;
 	border:1px solid rgb(200,200,70);
 }
 .buttonWarning:hover {
-	background:rgb(200,200,70)*0.9;
-	border:1px solid rgb(200,200,70);
+	background:#f0ad4e*0.9;
+	border:1px solid #f0ad4e * 0.8;
 }
 
 
 /*** Nav ***/
-.nav {
-	background: $primary_color;
-	height: 38px;
-	line-height: 38px;
-	padding-left:10px;
-}
-.nav {
-	a {
-		@extend .textAA;
-		padding-left:10px;
-		padding-right:10px;
-		padding-top:7px;
-		padding-bottom:7px;
 
-		@extend .text;
-		color: rgba(255,255,255, 0.9);
-		text-decoration:none;
-	}
-	a:hover {
-		Background: $secondary_color;
-	}
-}
 
 /*** Other ***/
 .primaryBorder {
@@ -435,7 +424,7 @@ h3 {
 
 /*** Form / Inputs ***/
 input[type=text] {
-	padding:4px;
+	padding:$padding_s;
 	font-size:14px;
 	color:rgba(0,0,0,0.70);
 }
@@ -444,7 +433,7 @@ select {
 	min-width:200px;
 	background:#fff;
 	border:1px solid rgba(0,0,0,0.2);
-	padding:5px;
+	padding:$padding_s;
 
 	font-size:13px;
 	    -webkit-appearance:none;
@@ -467,16 +456,22 @@ select {
 
 }
 
-.form-v {
-	.form-element {
+.form-styles {
+	/*
 		background:rgba(0,0,0,0.05);
 		border:1px solid rgba(0,0,0,0.1);
 		border-radius:2px;
+		*/
+}
+
+.form-v {
+	.form-element {
+		@extend .form-styles;
 	}
 
 	.info, .input {
 		
-		padding:5px;
+		padding:$padding_s;
 	}
 
 	.full input {
@@ -491,9 +486,9 @@ select {
 
 .form-h {
 	.form-element {
-		background:rgba(0,0,0,0.05);
-		border:1px solid rgba(0,0,0,0.1);
-		border-radius:2px;
+		@extend .form-styles;
+
+
 			display:flex;
 		display:-webkit-flex;
 	}
@@ -501,7 +496,7 @@ select {
 	.info, .input {
 		
 		padding:5px;
-		padding:10px;
+		padding:$padding_s;
 
 	}
 
@@ -523,11 +518,193 @@ select {
 	.half input {
 		width:50%;
 	}
+
+	.full select {
+		width:100%;
+	}
+	.half select {
+		width:100%;
+	}
 }
 
-/*** Media ***/
-@media screen and (max-width: 100px) {
-    .container {
-    	width: 100% !important;
-    }
+/********* Refeactoring names *********/
+
+@import 'normalize';
+/********* Variables / Tweaking *********/
+$default_padding: 		8;
+$small_padding: 		$default_padding - 3;
+$default_margin:        8;
+$small_margin:          $default_margin - 3;
+
+$default_text_color:    orange;
+
+$default_text_size:     14;
+$small_text_size:       12;
+$large_text_size:       16;
+
+$primary_color:         #283a4a;
+$secondary_color:       $primary_color * 1.2;
+$dark_color:            black;
+$muted_color:           grey;
+$auto_color_dark:       0;
+$auto_color_light:      0;
+
+$border_radius:         3;
+$border_radius_small:   2;
+
+$use_gradients:         false;
+
+/********* Mixins **********/
+@mixin animations()
+{
+	transition:0.3s;
+	-webkit-transition:0.3s;
 }
+
+/********* Core **********/
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 300;
+}
+
+.lyoReset {
+	margin: 0px;
+	padding: 0px;
+	border:none;
+	outline:none;
+}
+
+/********* Text / Style / Color **********/
+
+/********* Helpers / Generic **********/
+.lyoSpacerTop {
+	margin-top: $default_margin;
+}
+.lyoSpacerBottom {
+	margin-bottom: $default_margin;
+}
+.lyoSpacerBoth {
+	@extend .lyoSpacerTop;
+	@extend .lyoSpacerBottom;
+}
+
+/********* Nav **********/
+.lyoNav {
+	background: $primary_color;
+	background: if($use_gradients, linear-gradient($primary_color*1.5, $primary_color*1.0), $primary_color);
+	height: 38px;
+	line-height: 38px;
+	padding-left:10px;
+}
+.lyoNav {
+	a {
+		@extend .textAA;
+		padding-left:10px;
+		padding-right:10px;
+		padding-top:6px;
+		padding-bottom:6px;
+
+		@include animations();
+
+		@extend .text;
+		color: rgba(255,255,255, 0.9);
+		text-decoration:none;
+		border:1px solid rgba(0,0,0,0.0);
+	}
+	a:hover {
+		border:1px solid rgba(0,0,0,0.3);
+		background: $secondary_color;
+		border-radius:2px;
+	}
+}
+
+/********* Layout **********/
+.lyoHeader {
+	$height: 80px;
+
+	height: $height;
+	line-height: $height;
+}
+
+.lyoContainer {
+	max-width: 90%;
+	margin:0 auto;
+	border:1px solid rgba(0,0,0,0.2);
+}
+
+.lyoFlexContainer {
+	display: -webkit-flex;
+	display: flex;
+}
+
+.lyoLayout {
+	background:#fff;
+}
+
+.lyoLayoutMain {
+	padding: $small_padding;
+
+	-webkit-flex:1;
+	margin-top:$default_margin;
+	margin-bottom:$default_margin;
+}
+
+.lyoLayoutSide {
+	width: 200px;
+}
+
+.lyoFooter {
+	margin-top:10px;
+	padding:$default_padding;
+		background: if($use_gradients, linear-gradient(rgb(50,50,50)*1.5, rgb(50,50,50)*1.0), rgb(50,50,50));
+
+	color:rgba(255,255,255,0.5);
+}
+
+/********* Flex **********/
+
+/********* Buttons **********/
+.lyoBtn {
+
+}
+
+/********* Form / Input **********/
+
+/********* Flex table **********/
+.lyoTable {
+	display: -webkit-flex;
+	display: flex;
+	
+	border:1px solid red;
+}
+
+.lyoCol {
+	-webkit-flex:1;
+	flex:1;
+}
+
+.lyoRow {
+	width:100%;
+}
+
+/********* Box **********/
+.lyoBox {
+	@extend .spacerBoth;
+
+	border:1px solid $secondary_color;
+	border-radius: $border_radius;
+}
+
+.lyoBoxTitle {
+	background: $secondary_color;
+	background: if($use_gradients, linear-gradient($secondary_color*1.5, $secondary_color*1.0), $secondary_color);
+
+	color:#fff;
+	padding:$default_padding;
+}
+
+.lyoBoxContent {
+	padding:$default_padding;
+}
+
+
+

@@ -1,162 +1,74 @@
 <!doctype>
 <html>
 	<head>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link type='text/css' rel='stylesheet' href='framework.css'>
-	
-		<style>
-		body {
-			background:rgb(220,220,230);
-		}
-		.container {
-			max-width: 90%;
-			border:1px solid rgba(0,0,0,0.2);
-			box-shadow:0px 0px 10px 5px rgba(0,0,0,0.1);
-		}
-		.noBorder {
-			border:none;
-		}
-
-		.noShadow {
-			box-shadow:none;
-		}
-		</style>
 	</head>
 
+	<style>
+	body {
+		background:rgb(243,243,243);
+	}
+	</style>
+
 	<body>
-		<div class='container layout'>
-			<header>
-			<div class='' style='height:80px;'>
-			</div>
-			</header>
-			<nav class='nav'> 
-				<a href='#'>Index</a>
-				<a href='#'>Demo</a>
-			</nav>
-			<div class='layoutMain pad'>
-				<h3 class='sectionTitle'>
-				Hello
-				</h3>
-				<div class='box pad spacerBottom  borderTopHide'>
-					<h2>Hello</h2>
-					<div class='mutedText smallText'>
-					This is LYO demo page.<br>
-					<div class='box pad backgroundDarker spacerBoth'>
-						<span class='text'>Create account, have better experience! <a href='#'>Click here for more information</a></span>
-					</div>
-					<a href='#' class='button spacerBoth'>Create Account</a>
-					</div>
-				</div>
+		<!-- layout -->
+		<div class='lyoLayout lyoContainer'>
 
+			<!-- header -->
+				<header class='lyoHeader'>
+					This is title.
+				</header>
+			<!-- /header -->
 
-				<h3 class='sectionTitle'>
-				Table
-				</h3>
-				<div class='box pad spacerBottom backgroundDarker secondaryBorder roundedBox borderTopHide'>
-				
-				<h3 class='sectionTitle'>
-				Users table
-				</h3>
+			<!-- nav -->
+				<nav class='lyoNav'>
+					<a href='#'>Home</a>
+				</nav>
+			<!-- /nav -->
+
+			<!-- content -->
+				<div class='lyoLayoutMain'>
 					
-			
-			<!-- div table -->
-					<div class='table'>
-						<div class='row rowCenter'>
-							<div class='fixedCol colIcon'><i class='fa fa-fw'></i></div>
-							<div class='col'>Imie</div>
-							<div class='col'>Wiek</div>
-							<div class='fixedCol'>Ulubiony kolor</div>
-						</div>
-
-						<div class='row rowCenter'>
-									<div class='fixedCol colIcon'><i class='fa fa-user fa-fw'></i></div>
-							<div class='col'>Damian<br>
-							Balandowski 'aKa' DamianPrg</div>
-							<div class='col'>20</div>
-							<div class='fixedCol'>Niebieski</div>
-						</div>
-											<div class='row rowCenter'>
-									<div class='fixedCol colIcon'><i class='fa fa-user fa-fw'></i></div>
-							<div class='col'>Jan<br>
-							'aKa' JK</div>
-							<div class='col'>1000</div>
-							<div class='fixedCol'>Rozowy</div>
-						</div>
-
-												<div class='row rowCenter'>
-									<div class='fixedCol colIcon'><i class='fa fa-user fa-fw'></i></div>
-							<div class='col'>Damian<br>
-							Balandowski 'aKa' DamianPrg</div>
-							<div class='col'>20</div>
-							<div class='fixedCol'>Niebieski<br>
-							<a href='#' class='button buttonDark spacerBoth'>Moderation <i class='fa fa-caret-down'></i></a></div>
-						</div>
-					</div>	
-				<!-- /div table -->
-			
-					<a href='#' class='button spacerBoth'>Create Account</a>
-					<a href='#' class='button buttonDark spacerBoth'>Moderation <i class='fa fa-caret-down'></i></a>
-										<a href='#' class='button buttonDark buttonSmall spacerBoth'>Small <i class='fa fa-caret-down'></i></a>
-
-										<a href='#' class='button buttonDanger spacerBoth'>Remove</a>
-										<a href='#' class='button buttonWarning spacerBoth'>Warning</a>
-										<a href='#' class='button buttonSuccess buttonSmall spacerBoth'>Success</a>
-					</div>
-				
-
-							<h3 class='sectionTitle'>Form</h3>
-			<div class='box pad form'>
-				<form class='form-h'>
-					<div class='form-element full'>
-						<div class='info'>
-						Your name:
-						</div>
-
-						<div class='input'>
-							<input type='text'>
+					<!-- box #1 -->
+					<div class='lyoBox'>
+						<h3 class='lyoBoxTitle'>This is my box</h3>
+						<div class='lyoBoxContent'>
+						This is some content.
 						</div>
 					</div>
+					<!-- /box #1 -->
 
-					<div class='form-element half'>
-						<div class='info'>
-						Your age:
-						</div>
-
-						<div class='input'>
-							<input type='text'>
-							<br>
-							<div class='spacerBoth smallText mutedText'>Just your real name, please...</div>
-						</div>
-					</div>
-
-					<div class='form-element half'>
-						<div class='info'>
-						Select
-						</div>
-
-						<div class='input'>
-							<select>
-								<option>1</option>
-								<option>2</option>
-								<option>Best option</option>
-							</select>
-							<br>
-							<div class='spacerBoth smallText mutedText'>Just your real name, please...</div>
+					<!-- box table -->
+					<div class='lyoBox'>
+						<h3 class='lyoBoxTitle'>Table</h3>
+						<div class='lyoBoxContent'>
+							<!-- table -->
+							<div class='lyoTable'>
+								<div class='lyoRow'>
+									<div class='lyoCol'>Apple</div>
+									<div class='lyoCol'>Red</div>
+								</div>
+								<div class='lyoRow'>
+									<div class='lyoCol'>Banana</div>
+									<div class='lyoCol'>Yellow</div>
+								</div>
+							</div>
+							<!-- /table -->
 						</div>
 					</div>
-				</form>
-			</div>
+					<!-- /box table -->
 
-			</div>
-			</div>
+				</div>
+			<!-- /content -->
 
-
-		
-		<div class='container pad noBorder noShadow'>
-			<div class='text mutedText' style='text-align:center;'>LYO by Damian Balandowski</div>
+			<!-- footer -->
+			<footer class='lyoFooter'>
+			My footer.
+			</footer>
+			<!-- /footer -->
 		</div>
+		<!-- /layout -->
 	</body>
 </html>
