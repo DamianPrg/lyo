@@ -17,6 +17,10 @@ body {
   color: #505050;
   -webkit-font-smoothing: antialiased; }
 
+header {
+	font-weight: 100;
+}
+
 a {
   color: #283a4a; }
 
