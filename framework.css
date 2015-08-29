@@ -453,8 +453,8 @@ a:hover {
 /********* Nav **********/
 .lyoNav {
   background: #2c4051;
-  background: #2c4051;
-  background: #2c4051;
+  background: linear-gradient(#42607a, #2c4051);
+  background: linear-gradient(#304659, #283a49);
   height: 38px;
   line-height: 38px;
   padding-left: 10px; }
@@ -470,6 +470,8 @@ a:hover {
 .lyoNav a:hover {
   border: 1px solid rgba(255, 255, 255, 0.05);
   /*background: rgba(255,255,255,0.1);*/
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
   border-radius: 2px;
   text-decoration: none; }
 
@@ -511,14 +513,14 @@ a:hover {
 .lyoLayoutBottom {
   border-top: 1px solid rgba(0, 0, 0, 0.2); }
 
-.item, .itemLeft, .itemRight, .itemCenter {
+.lyoItem, .lyoItemLeft, .lyoItemRight, .lyoItemCenter {
   -webkit-flex: 1;
   flex: 1; }
 
-.itemRight {
+.lyoItemRight {
   text-align: right; }
 
-.itemCenter {
+.lyoItemCenter {
   text-align: center; }
 
 .lyoLayoutMain {
@@ -536,8 +538,8 @@ a:hover {
 .lyoFooter {
   /* margin-top:10px; */
   padding: 8;
-  background: #323232;
-  background: #323232;
+  background: linear-gradient(#4b4b4b, #323232);
+  background: linear-gradient(#373737, #2d2d2d);
   color: rgba(255, 255, 255, 0.5); }
 
 /********* Flex **********/
@@ -552,7 +554,7 @@ a:hover {
 .lyoBtn {
   padding: 8;
   background: #2c4051;
-  background: #2c4051;
+  background: linear-gradient(#304659, #283a49);
   display: inline-block;
   padding-left: 16;
   padding-right: 16;
@@ -581,42 +583,46 @@ a:hover {
 
 .lyoBtnSecondary {
   background: #233341;
-  background: #233341; }
+  background: linear-gradient(#273848, #202e3b); }
 
 .lyoBtnSecondary:hover {
-  background: #2e4255; }
+  background: #2e4255;
+  background: linear-gradient(#2b3e4f, #233241); }
 
 .lyoBtnDark {
   background: #323232;
-  background: #323232;
+  background: linear-gradient(#373737, #2d2d2d);
   border: 1px solid #282828; }
 
 .lyoBtnDark:hover {
-  background: #414141; }
+  background: linear-gradient(#3d3d3d, #323232); }
 
 .lyoBtnDanger {
   background: #d9534f;
-  background: #d9534f;
+  background: linear-gradient(#ef5b57, #c34b47);
   border: 1px solid #ae423f; }
 
 .lyoBtnDanger:hover {
-  background: #ff6c67; }
+  background: #ff6c67;
+  background: linear-gradient(#ff6460, #d7524e); }
 
 .lyoBtnWarning {
   background: #f0ad4e;
-  background: #f0ad4e;
+  background: linear-gradient(#ffbe56, #d89c46);
   border: 1px solid #c08a3e; }
 
 .lyoBtnWarning:hover {
-  background: #ffbe56; }
+  background: #ffbe56;
+  background: linear-gradient(#ffd15f, #e6ab4d); }
 
 .lyoBtnSuccess {
   background: #5cb85c;
-  background: #5cb85c;
+  background: linear-gradient(#65ca65, #53a653);
   border: 1px solid #4a934a; }
 
 .lyoBtnSuccess:hover {
-  background: #65ca65; }
+  background: #65ca65;
+  background: linear-gradient(#6fde6f, #5bb65b); }
 
 /********* Form / Input **********/
 /********* Flex table **********/
@@ -647,6 +653,8 @@ a:hover {
 .lyoBox, .lyoBoxDark {
   border: 1px solid #233341;
   border-radius: 3;
+  -webkit-border-radius: 3;
+  border-radius: 3;
   background: rgba(0, 0, 0, 0.03);
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-top: 1px solid transparent; }
@@ -656,15 +664,15 @@ a:hover {
 
 .lyoBoxTitle, .lyoBoxTitleDark {
   background: #233341;
-  background: #233341;
-  background: #233341;
+  background: linear-gradient(#354d62, #233341);
+  background: linear-gradient(#273848, #202e3b);
   color: #fff;
   padding: 8;
   border-top: none; }
 
 .lyoBoxTitleDark {
   background: #323232;
-  background: #323232;
+  background: linear-gradient(#373737, #2d2d2d);
   color: rgba(255, 255, 255, 0.5); }
 
 .lyoBoxContent {
