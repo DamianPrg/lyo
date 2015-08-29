@@ -453,8 +453,8 @@ a:hover {
 /********* Nav **********/
 .lyoNav {
   background: #2c4051;
-  background: linear-gradient(#42607a, #2c4051);
-  background: linear-gradient(#304659, #283a49);
+  background: #2c4051;
+  background: #2c4051;
   height: 38px;
   line-height: 38px;
   padding-left: 10px; }
@@ -524,19 +524,23 @@ a:hover {
 .lyoFooter {
   /* margin-top:10px; */
   padding: 8;
-  background: linear-gradient(#4b4b4b, #323232);
-  background: linear-gradient(#373737, #2d2d2d);
+  background: #323232;
+  background: #323232;
   color: rgba(255, 255, 255, 0.5); }
 
 /********* Flex **********/
 /********* Buttons **********/
 .lyoBtnLg {
-  padding: 20px; }
+  padding: 40px;
+  font-size: 16; }
+
+.lyoBtnSm {
+  font-size: 11; }
 
 .lyoBtn {
   padding: 8;
   background: #2c4051;
-  background: linear-gradient(#304659, #283a49);
+  background: #2c4051;
   display: inline-block;
   padding-left: 16;
   padding-right: 16;
@@ -565,14 +569,14 @@ a:hover {
 
 .lyoBtnSecondary {
   background: #233341;
-  background: linear-gradient(#273848, #202e3b); }
+  background: #233341; }
 
 .lyoBtnSecondary:hover {
   background: #2e4255; }
 
 .lyoBtnDark {
   background: #323232;
-  background: linear-gradient(#373737, #2d2d2d);
+  background: #323232;
   border: 1px solid #282828; }
 
 .lyoBtnDark:hover {
@@ -580,7 +584,7 @@ a:hover {
 
 .lyoBtnDanger {
   background: #d9534f;
-  background: linear-gradient(#ef5b57, #c34b47);
+  background: #d9534f;
   border: 1px solid #ae423f; }
 
 .lyoBtnDanger:hover {
@@ -588,7 +592,7 @@ a:hover {
 
 .lyoBtnWarning {
   background: #f0ad4e;
-  background: linear-gradient(#ffbe56, #d89c46);
+  background: #f0ad4e;
   border: 1px solid #c08a3e; }
 
 .lyoBtnWarning:hover {
@@ -596,7 +600,7 @@ a:hover {
 
 .lyoBtnSuccess {
   background: #5cb85c;
-  background: linear-gradient(#65ca65, #53a653);
+  background: #5cb85c;
   border: 1px solid #4a934a; }
 
 .lyoBtnSuccess:hover {
@@ -606,7 +610,8 @@ a:hover {
 /********* Flex table **********/
 .lyoTable {
   border: 1px solid rgba(0, 0, 0, 0.25);
-  padding: 8; }
+  padding: 8;
+  border: 1px solid red; }
 
 .lyoTableCentered .lyoRow {
   -webkit-align-items: center;
@@ -631,22 +636,23 @@ a:hover {
   border: 1px solid #233341;
   border-radius: 3;
   background: rgba(0, 0, 0, 0.03);
-  border: 1px solid rgba(0, 0, 0, 0.2); }
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-top: 1px solid transparent; }
 
 .lyoBoxDark {
   border: 1px solid rgba(0, 0, 0, 0.2); }
 
 .lyoBoxTitle, .lyoBoxTitleDark {
   background: #233341;
-  background: linear-gradient(#354d62, #233341);
-  background: linear-gradient(#273848, #202e3b);
+  background: #233341;
+  background: #233341;
   color: #fff;
   padding: 8;
   border-top: none; }
 
 .lyoBoxTitleDark {
   background: #323232;
-  background: linear-gradient(#373737, #2d2d2d);
+  background: #323232;
   color: rgba(255, 255, 255, 0.5); }
 
 .lyoBoxContent {

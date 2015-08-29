@@ -33,7 +33,7 @@ $border_radius_small:   2;
 $border_default_color:  red;
 $border_auto_color:     rgba(0,0,0,0.25);
 
-$use_gradients:         true;
+$use_gradients:         false;
 $aa:					true;
 
 $dark_factor:           0.8;
@@ -262,7 +262,12 @@ a:hover {
 /********* Buttons **********/
 
 .lyoBtnLg {
-	padding: 20px;
+	padding: 40px;
+	font-size: $large_text_size;
+}
+
+.lyoBtnSm {
+	font-size: $small_text_size - 1;
 }
 
 .lyoBtn {
@@ -366,6 +371,9 @@ background:#5cb85c * 1.1;
 
 	border:1px solid $border_auto_color;
 	padding: $default_padding;
+	border:1px solid red;
+
+
 }
 
 .lyoTableCentered .lyoRow {
@@ -401,6 +409,7 @@ background:#5cb85c * 1.1;
 
 	background:rgba(0,0,0,0.03);
 		border:1px solid rgba(0,0,0,0.2);
+		border-top:1px solid rgba(0,0,0,0.0);
 }
 
 .lyoBoxDark {
