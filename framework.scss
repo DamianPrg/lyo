@@ -19,7 +19,6 @@ $small_text_size:       12;
 $large_text_size:       16;
 
 $primary_color:         #283a4a * 1.1;
-$primary_color: rgb(100,20,20);
 $secondary_color:       $primary_color * 0.8;
 
 
@@ -34,10 +33,21 @@ $border_radius_small:   2;
 $border_default_color:  red;
 $border_auto_color:     rgba(0,0,0,0.25);
 
-$use_gradients:         false;
+$use_gradients:         true;
 $aa:					true;
 
 /********* Mixins **********/
+@mixin background-color($colc)
+{
+	//background: if($use_gradients, linear-gradinet($colc*2.0, $colc*3.0) ,$colc);
+	background: if($use_gradients, linear-gradient($colc*1.1,$colc*0.9), $colc);
+}
+
+@mixin transparent-border()
+{
+	border:1px solid rgba(0,0,0,0.0);
+}
+
 @mixin animations()
 {
 	transition:0.3s;
@@ -138,6 +148,8 @@ a:hover {
 .lyoNav {
 	background: $primary_color;
 	background: if($use_gradients, linear-gradient($primary_color*1.5, $primary_color*1.0), $primary_color);
+	@include background-color($primary_color);
+
 	height: 38px;
 	line-height: 38px;
 	padding-left:10px;
@@ -149,7 +161,7 @@ a:hover {
 		padding-top:6px;
 		padding-bottom:6px;
 
-		@include animations();
+		//@include animations();
 
 		color: rgba(255,255,255, 0.9);
 		text-decoration:none;
@@ -158,7 +170,7 @@ a:hover {
 	a:hover {
 
 		border:1px solid rgba(255,255,255,0.05);
-		background: rgba(255,255,255,0.1);
+		/*background: rgba(255,255,255,0.1);*/
 		border-radius:2px;
 		text-decoration:none;
 	}
@@ -177,9 +189,10 @@ a:hover {
 }
 
 .lyoContainer {
-	max-width: 1400px;
+	max-width: 1280px;
 	margin:0 auto;
 	border:1px solid rgba(0,0,0,0.2);
+	width: 92%;
 }
 
 .lyoFlexContainer {
@@ -231,6 +244,8 @@ a:hover {
 	padding:$default_padding;
 		background: if($use_gradients, linear-gradient(rgb(50,50,50)*1.5, rgb(50,50,50)*1.0), rgb(50,50,50));
 
+	@include background-color($dark_color);
+
 	color:rgba(255,255,255,0.5);
 }
 
@@ -238,9 +253,16 @@ a:hover {
 
 /********* Buttons **********/
 
+.lyoBtnLg {
+	padding: 20px;
+}
+
 .lyoBtn {
 	padding: $default_padding;
 	background: $primary_color;
+
+	@include background-color($primary_color);
+
 	display:inline-block;
 	padding-left: $default_padding * 2.0;
 	padding-right: $default_padding * 2.0;
@@ -255,6 +277,8 @@ a:hover {
 	margin-bottom:2px;
 		color: rgba(255,255,255,0.7);
 		text-decoration:none;
+
+		border:1px solid rgba(0,0,0,0.1)
 }
 
 .lyoBtn i {
@@ -278,6 +302,8 @@ a:hover {
 
 .lyoBtnSecondary {
 	background: $secondary_color;
+		@include background-color($secondary_color);
+
 }
 .lyoBtnSecondary:hover {
 	background: $secondary_color * 1.3;
@@ -285,6 +311,7 @@ a:hover {
 
 .lyoBtnDark {
 	background: $dark_color;
+	@include background-color($dark_color);
 }
 .lyoBtnDark:hover {
 	background: $dark_color * 1.3;
@@ -292,6 +319,8 @@ a:hover {
 
 .lyoBtnDanger {
 	background: #d9534f;
+			@include background-color(#d9534f);
+
 }
 .lyoBtnDanger:hover {
 	background: #d9534f * 1.3;
@@ -299,6 +328,7 @@ a:hover {
 
 .lyoBtnWarning {
 	background:#f0ad4e;
+	@include background-color(#f0ad4e);
 }
 .lyoBtnWarning:hover {
 		background:#f0ad4e * 1.1;
@@ -306,6 +336,7 @@ a:hover {
 
 .lyoBtnSuccess {
 	background:#5cb85c;
+	@include background-color(#5cb85c);
 }
 
 .lyoBtnSuccess:hover {
@@ -372,15 +403,20 @@ background:#5cb85c * 1.1;
 	background: $secondary_color;
 	background: if($use_gradients, linear-gradient($secondary_color*1.5, $secondary_color*1.0), $secondary_color);
 
+	@include background-color($secondary_color);
+
 	color:#fff;
 	padding:$default_padding;
 
 	@extend .lyoAutoLightColor;
+	border-top:none;
 }
 
 .lyoBoxTitleDark {
 	@extend .lyoBoxTitle;
 	background:$dark_color;
+	@include background-color($dark_color);
+
 	color:rgba(255,255,255,0.5);
 }
 
@@ -397,7 +433,7 @@ background:#5cb85c * 1.1;
 
 @media screen and (max-width: 950px) {
 	.lyoContainer {
-		max-width: 95%;
+		/* max-width: 95%; */
 	}
 }
 
