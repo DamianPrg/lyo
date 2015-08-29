@@ -485,7 +485,7 @@ a:hover {
   max-width: 1280px;
   margin: 0 auto;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  width: 92%; }
+  width: 96%; }
 
 .lyoFlexContainer {
   display: -webkit-flex;
@@ -501,13 +501,25 @@ a:hover {
 .lyoLayoutBottom,
 .lyoLayoutTop {
   background: whitesmoke;
-  padding: 8; }
+  padding: 8;
+  display: -webkit-flex;
+  display: flex; }
 
 .lyoLayoutTop {
   border-bottom: 1px solid rgba(0, 0, 0, 0.2); }
 
 .lyoLayoutBottom {
   border-top: 1px solid rgba(0, 0, 0, 0.2); }
+
+.item, .itemLeft, .itemRight, .itemCenter {
+  -webkit-flex: 1;
+  flex: 1; }
+
+.itemRight {
+  text-align: right; }
+
+.itemCenter {
+  text-align: center; }
 
 .lyoLayoutMain {
   padding: 5;
