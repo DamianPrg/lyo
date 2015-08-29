@@ -366,28 +366,46 @@ th {
 /********* Core **********/
 body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
   color: #414141;
   font-size: 14;
-  margin-top: -1px; }
+  margin-top: -1px;
+  -webkit-font-smoothing: antialiased; }
 
 div {
   overflow: hidden;
   box-sizing: border-box; }
+
+h1 {
+  font-size: 17px; }
+
+h2 {
+  font-size: 16px; }
+
+h3 {
+  font-size: 15px; }
+
+h4 {
+  font-size: 14px; }
+
+h5 {
+  font-size: 13px; }
+
+h6 {
+  font-size: 12px; }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 300;
   margin: 0px; }
 
 a {
-  color: #385268;
+  color: #801a1a;
   text-decoration: none;
   transition: 0.3s;
   -webkit-transition: 0.3s; }
 
 a:hover {
   text-decoration: underline;
-  color: #3c576f; }
+  color: #881b1b; }
 
 .lyoReset {
   margin: 0px;
@@ -396,6 +414,16 @@ a:hover {
   outline: none; }
 
 /********* Text / Style / Color **********/
+.lyoText {
+  font-size: 14; }
+
+.lyoTextSmall, .lyoLayoutBottom,
+.lyoLayoutTop {
+  font-size: 12; }
+
+.lyoTextLarge {
+  font-size: 16; }
+
 .lyoAutoTextShadow, .lyoBoxTitle, .lyoBoxTitleDark {
   text-shadow: 0px -1px 1px rgba(0, 0, 0, 0.5); }
 
@@ -424,8 +452,8 @@ a:hover {
 
 /********* Nav **********/
 .lyoNav {
-  background: #2c4051;
-  background: #2c4051;
+  background: #641414;
+  background: #641414;
   height: 38px;
   line-height: 38px;
   padding-left: 10px; }
@@ -441,9 +469,10 @@ a:hover {
   text-decoration: none;
   border: 1px solid transparent; }
 .lyoNav a:hover {
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 2px; }
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  text-decoration: none; }
 
 /********* Layout **********/
 .lyoHeader {
@@ -469,6 +498,17 @@ a:hover {
   border-bottom: none;
   border-top: none; }
 
+.lyoLayoutBottom,
+.lyoLayoutTop {
+  background: #fafafa;
+  padding: 8; }
+
+.lyoLayoutTop {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2); }
+
+.lyoLayoutBottom {
+  border-top: 1px solid rgba(0, 0, 0, 0.2); }
+
 .lyoLayoutMain {
   padding: 5;
   -webkit-flex: 1;
@@ -482,25 +522,16 @@ a:hover {
   margin-bottom: 8; }
 
 .lyoFooter {
-  margin-top: 10px;
+  /* margin-top:10px; */
   padding: 8;
   background: #323232;
   color: rgba(255, 255, 255, 0.5); }
 
 /********* Flex **********/
 /********* Buttons **********/
-.lyoBtnsSW .lyoBtn {
-  width: 200px; }
-
-.lyoBtnsF .lyoBtn {
-  width: 100%; }
-
-.lyoBtnsPretty .lyoBtn {
-  color: rgba(0, 0, 0, 0.5); }
-
 .lyoBtn {
   padding: 8;
-  background: #2c4051;
+  background: #641414;
   display: inline-block;
   padding-left: 16;
   padding-right: 16;
@@ -511,17 +542,26 @@ a:hover {
   border-radius: 2;
   margin-top: 2px;
   margin-bottom: 2px;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none; }
+
+.lyoBtn i {
+  color: rgba(255, 255, 255, 0.3); }
+
+.lyoBtn:hover i {
   color: rgba(255, 255, 255, 0.5); }
 
 .lyoBtn:hover {
-  background: #395369;
-  border-radius: 3; }
+  color: #fff;
+  background: #821a1a;
+  border-radius: 3;
+  text-decoration: none; }
 
 .lyoBtnSecondary {
-  background: #233341; }
+  background: #501010; }
 
 .lyoBtnSecondary:hover {
-  background: #2e4255; }
+  background: #681515; }
 
 .lyoBtnDark {
   background: #323232; }
@@ -573,20 +613,17 @@ a:hover {
 
 /********* Box **********/
 .lyoBox, .lyoBoxDark {
-  border: 1px solid #233341;
-  border-radius: 3; }
+  border: 1px solid #501010;
+  border-radius: 3;
+  background: rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(0, 0, 0, 0.2); }
 
 .lyoBoxDark {
-  border: 1px solid #323232;
-  background: #2d2d2d;
-  color: rgba(255, 255, 255, 0.5); }
-
-.lyoBoxDark a {
-  color: rgba(255, 255, 255, 0.8); }
+  border: 1px solid rgba(0, 0, 0, 0.2); }
 
 .lyoBoxTitle, .lyoBoxTitleDark {
-  background: #233341;
-  background: #233341;
+  background: #501010;
+  background: #501010;
   color: #fff;
   padding: 8; }
 
@@ -601,6 +638,9 @@ a:hover {
 @media screen and (max-width: 950px) {
   .lyoLayoutSide {
     display: none; } }
+@media screen and (max-width: 950px) {
+  .lyoContainer {
+    max-width: 95%; } }
 /* Hide sides */
 
 /*# sourceMappingURL=framework.css.map */

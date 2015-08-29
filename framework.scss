@@ -19,7 +19,11 @@ $small_text_size:       12;
 $large_text_size:       16;
 
 $primary_color:         #283a4a * 1.1;
+$primary_color: rgb(100,20,20);
 $secondary_color:       $primary_color * 0.8;
+
+
+$secondary_light: 		$primary_color * 1.2;
 $dark_color:            rgb(50,50,50);
 $muted_color:           rgb(70,70,70);
 $auto_color_dark:       0;
@@ -31,6 +35,7 @@ $border_default_color:  red;
 $border_auto_color:     rgba(0,0,0,0.25);
 
 $use_gradients:         false;
+$aa:					true;
 
 /********* Mixins **********/
 @mixin animations()
@@ -42,16 +47,24 @@ $use_gradients:         false;
 /********* Core **********/
 body {
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	-webkit-font-smoothing: antialiased;
+
 	color: $default_text_color;
 	font-size:$default_text_size;
 	margin-top: -1px;
+	-webkit-font-smoothing: if($aa, antialiased, none);
 }
 
 div {
 	overflow:hidden;
 	box-sizing: border-box;
 }
+
+h1 { font-size: 17px; }
+h2 { font-size: 16px; }
+h3 { font-size:15px; }
+h4 { font-size: 14px;}
+h5 { font-size: 13px; }
+h6 { font-size: 12px; }
 
 h1, h2, h3, h4, h5, h6 {
 	font-weight: 300;
@@ -76,6 +89,16 @@ a:hover {
 }
 
 /********* Text / Style / Color **********/
+.lyoText {
+	font-size: $default_text_size;
+}
+.lyoTextSmall {
+	font-size: $default_text_size - 2;
+}
+.lyoTextLarge {
+	font-size: $default_text_size + 2;
+}
+
 .lyoAutoTextShadow {
 	text-shadow:0px -1px 1px rgba(0,0,0,0.5);
 }
@@ -133,9 +156,11 @@ a:hover {
 		border:1px solid rgba(0,0,0,0.0);
 	}
 	a:hover {
-		border:1px solid rgba(255,255,255,0.3);
-		background: rgba(255,255,255,0.2);
+
+		border:1px solid rgba(255,255,255,0.05);
+		background: rgba(255,255,255,0.1);
 		border-radius:2px;
+		text-decoration:none;
 	}
 }
 
@@ -170,6 +195,20 @@ a:hover {
 	border-top:none;
 }
 
+.lyoLayoutBottom,
+.lyoLayoutTop {
+	background:$dark_color * 5.0;
+	padding:$default_padding;
+	@extend .lyoTextSmall;
+}
+
+.lyoLayoutTop {
+		border-bottom:1px solid rgba(0,0,0,0.2);
+}
+.lyoLayoutBottom {
+	border-top:1px solid rgba(0,0,0,0.2);
+}
+
 .lyoLayoutMain {
 	padding: $small_padding;
 
@@ -187,7 +226,8 @@ a:hover {
 }
 
 .lyoFooter {
-	margin-top:10px;
+	/* margin-top:10px; */
+
 	padding:$default_padding;
 		background: if($use_gradients, linear-gradient(rgb(50,50,50)*1.5, rgb(50,50,50)*1.0), rgb(50,50,50));
 
@@ -197,17 +237,6 @@ a:hover {
 /********* Flex **********/
 
 /********* Buttons **********/
-.lyoBtnsSW .lyoBtn {
-	width: 200px;
-}
-
-.lyoBtnsF .lyoBtn {
-	width: 100%;
-}
-
-.lyoBtnsPretty .lyoBtn {
-	color: rgba(0,0,0,0.5);
-}
 
 .lyoBtn {
 	padding: $default_padding;
@@ -224,12 +253,25 @@ a:hover {
 	border-radius:$border_radius_small;
 	margin-top:2px;
 	margin-bottom:2px;
-		color: rgba(255,255,255,0.5);
+		color: rgba(255,255,255,0.7);
+		text-decoration:none;
+}
+
+.lyoBtn i {
+	color: rgba(255,255,255,0.3);
 }
 
 .lyoBtn:hover {
+	i {
+		color: rgba(255,255,255,0.5);
+	}
+}
+
+.lyoBtn:hover {
+	color:#fff;
 	background: $primary_color * 1.3;
 	border-radius:$border_radius;
+	text-decoration:none;
 
 
 }
@@ -312,16 +354,16 @@ background:#5cb85c * 1.1;
 	border:1px solid $secondary_color;
 	border-radius: $border_radius;
 
+	background:rgba(0,0,0,0.03);
+		border:1px solid rgba(0,0,0,0.2);
 }
 
 .lyoBoxDark {
 	@extend .lyoBox;
-	border:1px solid $dark_color;
-	background:$dark_color*0.9;
-	color:rgba(255,255,255,0.5);
-}
-.lyoBoxDark a {
-	color: rgba(255,255,255,0.8);
+	border:1px solid rgba(0,0,0,0.2);
+
+
+
 }
 
 .lyoBoxTitle {
@@ -350,6 +392,12 @@ background:#5cb85c * 1.1;
 @media screen and (max-width: 950px) {
 	.lyoLayoutSide {
 		display:none;
+	}
+}
+
+@media screen and (max-width: 950px) {
+	.lyoContainer {
+		max-width: 95%;
 	}
 }
 
