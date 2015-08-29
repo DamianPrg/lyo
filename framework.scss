@@ -36,11 +36,18 @@ $border_auto_color:     rgba(0,0,0,0.25);
 $use_gradients:         true;
 $aa:					true;
 
+$dark_factor:           0.8;
+
 /********* Mixins **********/
 @mixin background-color($colc)
 {
 	//background: if($use_gradients, linear-gradinet($colc*2.0, $colc*3.0) ,$colc);
 	background: if($use_gradients, linear-gradient($colc*1.1,$colc*0.9), $colc);
+}
+
+@mixin _border($c)
+{
+	border:1px solid $c*$dark_factor;
 }
 
 @mixin transparent-border()
@@ -62,6 +69,7 @@ body {
 	font-size:$default_text_size;
 	margin-top: -1px;
 	-webkit-font-smoothing: if($aa, antialiased, none);
+
 }
 
 div {
@@ -203,14 +211,14 @@ a:hover {
 .lyoLayout {
 	background:#fff;
 	border:1px solid rgba(0,0,0,0.2);
-	box-shadow:0px 0px 10px 1px rgba(0,0,0,0.3);
+	box-shadow:0px 0px 6px 1px rgba(0,0,0,0.1);
 	border-bottom:none;
 	border-top:none;
 }
 
 .lyoLayoutBottom,
 .lyoLayoutTop {
-	background:$dark_color * 5.0;
+	background:$dark_color * 4.9;
 	padding:$default_padding;
 	@extend .lyoTextSmall;
 }
@@ -272,29 +280,30 @@ a:hover {
 
 	@include animations();
 
-	border-radius:$border_radius_small;
+	border-radius:3px;
 	margin-top:2px;
 	margin-bottom:2px;
 		color: rgba(255,255,255,0.7);
 		text-decoration:none;
 
-		border:1px solid rgba(0,0,0,0.1)
+		border:1px solid rgba(255,255,255,0.05);
+
+		color:#fff;
+		text-shadow:0px -1px 1px rgba(0,0,0,0.2);
+
+border:1px solid $primary_color*$dark_factor;
 }
 
 .lyoBtn i {
 	color: rgba(255,255,255,0.3);
 }
 
-.lyoBtn:hover {
-	i {
-		color: rgba(255,255,255,0.5);
-	}
-}
+
 
 .lyoBtn:hover {
 	color:#fff;
-	background: $primary_color * 1.3;
-	border-radius:$border_radius;
+	/*background: $primary_color * 1.3;
+	border-radius:$border_radius;*/
 	text-decoration:none;
 
 
@@ -312,6 +321,7 @@ a:hover {
 .lyoBtnDark {
 	background: $dark_color;
 	@include background-color($dark_color);
+	@include _border($dark_color);
 }
 .lyoBtnDark:hover {
 	background: $dark_color * 1.3;
@@ -320,6 +330,8 @@ a:hover {
 .lyoBtnDanger {
 	background: #d9534f;
 			@include background-color(#d9534f);
+				@include _border(#d9534f);
+
 
 }
 .lyoBtnDanger:hover {
@@ -329,6 +341,7 @@ a:hover {
 .lyoBtnWarning {
 	background:#f0ad4e;
 	@include background-color(#f0ad4e);
+	@include _border(#f0ad4e);
 }
 .lyoBtnWarning:hover {
 		background:#f0ad4e * 1.1;
@@ -337,6 +350,7 @@ a:hover {
 .lyoBtnSuccess {
 	background:#5cb85c;
 	@include background-color(#5cb85c);
+	@include _border(#5cb85c);
 }
 
 .lyoBtnSuccess:hover {
