@@ -418,6 +418,7 @@ textarea {
 }
 
 .lyoFormH {
+
 	.lyoFormElement {
 		display: -webkit-flex;
 		display: flex;
@@ -443,6 +444,18 @@ textarea {
 			-webkit-flex: 2;
 			flex: 2;
 			padding: $small_padding;
+		}
+
+		.lyoDesc {
+			@extend .lyoSpacerTop;
+
+			color: $muted_color;
+			font-size: $small_text_size;
+		}
+
+		.lyoRadio {
+			padding:10px;
+			background:rgba(0,0,0,0.05);
 		}
 	}
 }
@@ -522,12 +535,19 @@ textarea {
 
 }
 
+.lyoBoxNoTitle {
+	border-top:1px solid rgba(0,0,0,0.2);
+}
+
 .lyoBoxDark {
 	@extend .lyoBox;
 	border:1px solid rgba(0,0,0,0.2);
 	border-top:none;
 
 
+}
+.lyoBoxDarkNoTitle {
+	border-top:1px solid rgba(0,0,0,0.2);
 }
 
 .lyoBoxTitle {
@@ -544,6 +564,8 @@ textarea {
 	@extend .lyoAutoLightColor;
 	border-top:none;
 }
+
+
 
 .lyoBoxTitleDark {
 	@extend .lyoBoxTitle;

@@ -447,7 +447,7 @@ a:hover {
 .lyoPadRight {
   padding-right: 8; }
 
-.lyoSpacerTop, .lyoSpacerBoth, .lyoBox, .lyoBoxDark {
+.lyoSpacerTop, .lyoSpacerBoth, .lyoBox, .lyoBoxDark, .lyoFormH .lyoFormElement .lyoDesc {
   margin-top: 8; }
 
 .lyoSpacerBottom, .lyoSpacerBoth, .lyoBox, .lyoBoxDark {
@@ -662,6 +662,12 @@ textarea {
     -webkit-flex: 2;
     flex: 2;
     padding: 5; }
+  .lyoFormH .lyoFormElement .lyoDesc {
+    color: #464646;
+    font-size: 12; }
+  .lyoFormH .lyoFormElement .lyoRadio {
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.05); }
 
 .lyoFormV .lyoInfo {
   padding: 5; }
@@ -707,9 +713,15 @@ textarea {
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-top: none; }
 
+.lyoBoxNoTitle {
+  border-top: 1px solid rgba(0, 0, 0, 0.2); }
+
 .lyoBoxDark {
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-top: none; }
+
+.lyoBoxDarkNoTitle {
+  border-top: 1px solid rgba(0, 0, 0, 0.2); }
 
 .lyoBoxTitle, .lyoBoxTitleDark {
   background: #233341;
